@@ -32,12 +32,12 @@ The second section of the project leverages a pre-trained model that has been fi
 
 #### Process
 
-**Pre-trained Model Selection**: Selected a model known for its effectiveness in image recognition tasks is chosen as the base.
+**Pre-trained Model Selection**: Selected a model known for its effectiveness in image recognition tasks is chosen as the base. pyTorch is easy to work with and the default proved to be sufficient for our dataset, as it achieved an average of 81% accuracy and as high as 85 in some epochs. 
 
 **Fine-tuning**: This model is then fine-tuned using a large dataset specifically compiled to include a wide range of NSFW media. This process adapts the model to be highly sensitive to the nuances of inappropriate content.
 
-**Content Filtering**: Images processed through the model are evaluated for their appropriateness. Those identified as containing NSFW elements are automatically filtered out from the user-facing elements of the application.
+**Content Filtering**: Images processed through the model are evaluated for their appropriateness. Those identified as containing NSFW elements are labeled as such. Non NSFW images can be labeled as drawing or neutral. 
 
 ### Link to NSFW Filter Model
 
-This is a shared Google Drive as the file itself was too large to download. I would recommend downloading this file as soon as possible. If there are errors loading the model, you might as well run the whole script again and create a new one. Depending on your computer, it should take around 2 hours to train the whole thing.  https://drive.google.com/file/d/1324bgKDehoZ_f8qm7uUP2weQqHCWwjHG/view?usp=sharing
+This is a shared Google Drive as the file itself was too large to upload here. I would recommend downloading this file as soon as possible. If there are errors loading the model, you might as well run the whole script again and create a new one. Depending on your computer, it should take around 2 hours to train the whole thing.  https://drive.google.com/file/d/1324bgKDehoZ_f8qm7uUP2weQqHCWwjHG/view?usp=sharing 
