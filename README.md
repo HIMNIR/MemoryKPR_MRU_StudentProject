@@ -16,8 +16,11 @@ In the first part of our project, we aim to evaluate the relevance of images bas
 #### Process
 
 **Image Labeling**: Images are processed using a CNN model hosted on AWS, which generates a set of descriptive labels for each image.
+
 **Text Vectorization**: User inputs, including direct text descriptions and smart story narratives, are vectorized into a format that can be numerically analyzed. This involves transforming the text into a series of vectors that represent the semantic meaning of the words in a high-dimensional space.
+
 **Embedding Layer Creation**: An embedding layer is then created for both the image labels and the vectorized text inputs. This layer serves as the foundation for comparing the semantic content of the images and text.
+
 **Cosine Similarity Calculation**: We compute the cosine similarity between the embeddings of the image labels and the text inputs. This metric quantifies the similarity of the vectors, with a higher score indicating greater similarity.
     Threshold Application: Outputs that achieve a cosine similarity score above a predetermined threshold are classified as having a significant level of similarity. This threshold can be adjusted based on the desired sensitivity of the model.
 
@@ -30,7 +33,9 @@ The second section of the project leverages a pre-trained model that has been fi
 #### Process
 
 **Pre-trained Model Selection**: Selected a model known for its effectiveness in image recognition tasks is chosen as the base.
+
 **Fine-tuning**: This model is then fine-tuned using a large dataset specifically compiled to include a wide range of NSFW media. This process adapts the model to be highly sensitive to the nuances of inappropriate content.
+
 **Content Filtering**: Images processed through the model are evaluated for their appropriateness. Those identified as containing NSFW elements are automatically filtered out from the user-facing elements of the application.
 
 ### Link to NSFW Filter Model
